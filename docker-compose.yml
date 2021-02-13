@@ -11,4 +11,4 @@ services:
       TZ: Asia/Tokyo
     stdin_open: true
     tty: true
-    command: sh ./docker/rails/entrypoint.sh && ash
+    command: ["ash"]
