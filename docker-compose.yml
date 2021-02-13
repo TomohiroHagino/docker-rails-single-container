@@ -1,0 +1,14 @@
+version: '3'
+services:
+  rails:
+    build:
+      context: ./docker/rails/
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    environment:
+      TZ: Asia/Tokyo
+    stdin_open: true
+    tty: true
+    command: sh -c "entrypoint.sh" && ["ash"]
