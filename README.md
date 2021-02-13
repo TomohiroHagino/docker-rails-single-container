@@ -28,6 +28,8 @@ $ rm -rf .git
 1. docker desktopをインストールしたあと、Railsのリポジトリをクローンする。
 $ git clone <クローンしたいRailsリポジトリ>
 $ mv <クローンしたいRailsリポジトリ名>/* .
+(もし新規作成するなら、 rails new <プロジェクト名> --skip-test)
+(mv <プロジェクト名>/* .)
 
 2. そして、/docker/railsディレクトリに入っているDockerfileの1行目にかかれたRubyのバージョンをお好みのものに変更する。
 
