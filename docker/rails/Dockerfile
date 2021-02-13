@@ -30,7 +30,7 @@ RUN apk update && \
         curl-dev \
         graphviz \
 #       rails6をインストールしたい場合はyarnを追加する。
-#        yarn　\
+        yarn \
         vim
 
 RUN mkdir /myapp
