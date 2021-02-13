@@ -63,4 +63,5 @@ ENV EDITOR vim
 # タイムゾーン
 ENV TZ="Asia/Tokyo"
 
+CMD ["entrypoint.sh"]
 EXPOSE 3000
