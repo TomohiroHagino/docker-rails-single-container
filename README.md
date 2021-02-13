@@ -32,7 +32,7 @@ $ cp Gemfile.lock ./docker/rails/
 (Rails6をインストールしたい場合はDockerfileとentrypoint.shのyarnのコメントアウトを外すこと)
 
 4. ここから環境構築。　初回時はこれ（imageがなければimageビルドから）コンテナの起動までを行う。
-$ docker-compose up
+$ docker-compose up -d
 
 railsコンテナのターミナルに直接アクセス
 コンテナから抜ける時はCommand+P,Q
