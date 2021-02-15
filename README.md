@@ -57,15 +57,16 @@ $ cp Gemfile.lock ./docker/rails/
 (Railsのバージョンは5、開発時はsqlite3、本番時はpostgresqlを使用するのを想定してます。)
 (Rails6をインストールしたい場合はDockerfileとentrypoint.shのyarnのコメントアウトを外すこと)
 
-4. ここから環境構築。　初回時はこれ（imageがなければimageビルドから）コンテナの起動までを行う。
+4. ここから環境構築。初回時はこれ（imageがなければimageビルドから）コンテナの起動までを行う。
+(mac,linux,windows共通)
 $ docker-compose up -d
 
 railsコンテナのターミナルに直接アクセス
-コンテナから抜ける時はCommand+P,Q
+(mac,linux,windows共通)
 $ docker-compose exec rails ash
 
 5. サーバーの立ち上げ
-rails s -b 0.0.0.0
+#(コンテナ内で) rails s -b 0.0.0.0
 
 6. DB関連 コンテナに直接アクセスして以下のコマンドをやればOK
 #(コンテナ内で) rails db:reset
