@@ -25,11 +25,20 @@ git cloneしてきて、３コマンドくらい打って、docker-compose upと
 0.このリポジトリをクローンして.gitファイルを削除する。
 $ rm -rf .git
 
-1. docker desktopをインストールしたあと、Railsのリポジトリをクローンする。
+1. docker desktopをインストールしたあと、このDocker用のファイル郡とおなじ階層にRailsのリポジトリをgit cloneしてください。
 $ git clone <クローンしたいRailsリポジトリ>
+
+(mac,linux)
 $ mv <クローンしたいRailsリポジトリ名>/* .
+(windows)
+> move <クローンしたいRailsリポジトリ名>/* .
+
 (もし新規作成するなら、 rails new <プロジェクト名> --skip-test)
+(mac,linux)
 (mv <プロジェクト名>/* .)
+(windows)
+(move <プロジェクト名>/* .)
+
 
 2. そして、/docker/railsディレクトリに入っているDockerfileの1行目にかかれたRubyのバージョンをお好みのものに変更する。
 
